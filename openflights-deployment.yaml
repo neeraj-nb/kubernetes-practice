@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openflights-deployment
+  labels:
+    app: openflights
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openflights
+  template:
+    metadata:
+      labels:
+        app: openflights
+    spec:
+      containers:
+      - name: openflights
+        image: open-flights-app
+        ports:
+        - containerPort: 3000
