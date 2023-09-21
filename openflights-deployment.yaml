@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: openflights
-        image: open-flights-app
+        image: open-flights
+        imagePullPolicy: Never
         ports:
         - containerPort: 3000
