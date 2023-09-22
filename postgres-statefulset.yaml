@@ -44,12 +44,12 @@ spec:
         volumeMounts:
         - name: pvc
           mountPath: /var/lib/postgresql/data
-    volumeClaimTemplates:
-    - metadata:
-        name: pvc
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-           storage: 1Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: pvc
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 500Mi
