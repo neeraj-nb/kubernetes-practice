@@ -5,8 +5,7 @@ metadata:
 spec:
   selector:
     app: openflights
-  type: LoadBalancer
   ports:
-  - port: 3000
+  - protocol: TCP
+    port: 3000
     targetPort: 3000
-    nodePort: 30000
